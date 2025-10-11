@@ -17,7 +17,7 @@
 3. Implementasi **title row**.
 
 ### Output:
-![Praktikum 1 Output](img_laporan\P1.png)
+![Praktikum 1 Output](belanja/image/P1.png)
 
 ---
 
@@ -29,7 +29,7 @@
 3. Menambahkan `buttonSection` ke `body`.
 
 ### Output:
-![Praktikum 2 Output](img_laporan\P2.png)
+![Praktikum 2 Output](belanja/image/P2.png)
 
 ---
 
@@ -40,7 +40,7 @@
 2. Menambahkan variabel `textSection` ke `body`.
 
 ### Output:
-![Praktikum 3 Output](img_laporan\P3.png)
+![Praktikum 3 Output](belanja/image/P3.png)
 
 ---
 
@@ -52,7 +52,7 @@
 3. Mengubah `Column` menjadi `ListView`.
 
 ### Output:
-![Praktikum 4 Output](img_laporan\P4.png)
+![Praktikum 4 Output](belanja/image/P4.png)
 
 ---
 
@@ -77,7 +77,7 @@ Ada di commit project belanja
 ### 1️⃣ Tugas Praktikum 1: `basic_layout_Flutter`
 > _Hasil :_
 
-![Tugas 1 Output](img_laporan\TP1.png)
+![Tugas 1 Output](belanja/image/TP1.png)
 
 ---
 
@@ -85,10 +85,10 @@ Ada di commit project belanja
 
 #### Deskripsi:
 - Kirim data ke halaman berikutnya dengan menambahkan **arguments** pada `Navigator`.
-![Tugas 2 Output](img_laporan\TP2a.png)
+![Tugas 2 Output](belanja/image/TP2a.png)
 
 - Baca nilai yang dikirim menggunakan `ModalRoute` di halaman `ItemPage`.
-![Tugas 2 Output](img_laporan\TP2b.png)
+![Tugas 2 Output](belanja/image/TP2b.png)
 
 - Tambahkan atribut:
   - Foto produk 🖼️  
@@ -96,20 +96,20 @@ Ada di commit project belanja
   - Rating ⭐  
 
 - Ubah tampilan menjadi **GridView** seperti aplikasi marketplace.
-![Tugas 2 Output](img_laporan\TP2c.png)
+![Tugas 2 Output](belanja/image/TP2c.png)
 
 - Implementasikan **Hero Widget** pada aplikasi belanja.
-![Tugas 2 Output](img_laporan\TP2d.png)
+![Tugas 2 Output](belanja/image/TP2d.png)
 
 - Pecah widget menjadi kode yang lebih kecil agar lebih modular.
 - Tambahkan **Nama dan NIM** di footer aplikasi.
-![Tugas 2 Output](img_laporan\TP2e.png)
+![Tugas 2 Output](belanja/image/TP2e.png)
 
 - Cobalah modifikasi menggunakan plugin **go_router**.
-![Tugas 2 Output](img_laporan\TP2f.png)
+![Tugas 2 Output](belanja/image/TP2f.png)
 
 #### Output Akhir:
-![Tugas 2 Output](img_laporan\TP2e.png)
+![Tugas 2 Output](belanja/image/TP2e.png)
 
 ---
 
