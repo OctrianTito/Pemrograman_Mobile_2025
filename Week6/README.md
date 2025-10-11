@@ -9,11 +9,6 @@
 
 ---
 
-## 🔗 Link Repository
-> _(Isi dengan tautan repository GitHub project kamu)_
-
----
-
 ## 🧩 Praktikum 1: Membangun Layout di Flutter
 
 ### Langkah-langkah:
