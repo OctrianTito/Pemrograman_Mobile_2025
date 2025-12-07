@@ -1,5 +1,6 @@
 import '../models/data_layer.dart';
 import 'package:flutter/material.dart';
+import '../provider/plan_provider.dart';
 
 class PlanScreen extends StatefulWidget {
   const PlanScreen({super.key});
@@ -29,32 +30,40 @@ class _PlanScreenState extends State<PlanScreen> {
 
   @override
   Widget build(BuildContext context) {
+    ValueNotifier<Plan> planNotifier = PlanProvider.of(context);
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Master Plan Octrian Adiluhung'),
+        title: const Text('Master Plan Octrian Tito'),
         backgroundColor: Theme.of(context).primaryColor,
         foregroundColor: Colors.white,
       ),
-      body: _buildList(),
+      body: Column(
+        children: [
+          Expanded(child: _buildList()),
+          SafeArea(child: Text(planNotifier.value.completenessMessage)),
+        ],
+      ),
       floatingActionButton: _buildAddTaskButton(),
     );
   }
-
   Widget _buildAddTaskButton() {
+    ValueNotifier<Plan> planNotifier = PlanProvider.of(context);
     return FloatingActionButton(
       child: const Icon(Icons.add),
       onPressed: () {
-        setState(() {
-          plan = Plan(
-            name: plan.name,
-            tasks: List<Task>.from(plan.tasks)..add(const Task()),
-          );
-        });
+        Plan currentPlan = planNotifier.value;
+        planNotifier.value = Plan(
+          name: currentPlan.name,
+          tasks: List<Task>.from(currentPlan.tasks)..add(const Task()),
+        );
       },
     );
   }
 
   Widget _buildList() {
+    ValueNotifier<Plan> planNotifier = PlanProvider.of(context);
+    Plan plan = planNotifier.value;
+
     return ListView.builder(
       controller: scrollController,
       keyboardDismissBehavior: Theme.of(context).platform == TargetPlatform.iOS
@@ -66,6 +75,8 @@ class _PlanScreenState extends State<PlanScreen> {
   }
 
   Widget _buildTaskTile(Task task, int index) {
+    ValueNotifier<Plan> planNotifier = PlanProvider.of(context);
+    
     return ListTile(
       leading: Checkbox(
           value: task.complete,
@@ -84,16 +95,15 @@ class _PlanScreenState extends State<PlanScreen> {
       title: TextFormField(
         initialValue: task.description,
         onChanged: (text) {
-          setState(() {
-            plan = Plan(
-              name: plan.name,
-              tasks: List<Task>.from(plan.tasks)
-                ..[index] = Task(
-                  description: text,
-                  complete: task.complete,
+          Plan currentPlan = planNotifier.value;
+          planNotifier.value = Plan(
+            name: currentPlan.name,
+            tasks: List<Task>.from(currentPlan.tasks)
+              ..[index] = Task(
+                description: text,
+                complete: task.complete,
                 ),
-            );
-          });
+          );
         },
       ),
     );
